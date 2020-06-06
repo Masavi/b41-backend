@@ -1,9 +1,8 @@
-const { Users } = require('../models');
+const { UsersService } = require('../services');
 
 module.exports = {
   create: (req, res) => {
-    const newUser = new Users(req.body);
-    newUser.save()
+    UsersService.create(req.body)
       .then((user) => res.status(201).json(user))
       .catch((err) => res.status(400).json(err));
   },
