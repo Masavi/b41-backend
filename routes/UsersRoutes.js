@@ -9,4 +9,7 @@ router.post('/api/v1/users',
   UsersValidator.create,
   UsersController.create);
 
+router.get('/api/v1/users',
+  UsersController.findAll);
+
 module.exports = router;

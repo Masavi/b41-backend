@@ -5,4 +5,5 @@ module.exports = {
     const newUser = new Users(body);
     return newUser.save();
   },
+  findAll: () => Users.find({ is_active: true }),
 };
