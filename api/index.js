@@ -8,7 +8,7 @@ api.use(express.json({ extended: true }));
 
 api.get('/', (req, res) => res.json({ message: 'Hello DEV.F' }));
 
-api.use(require('../routes/UsersRoutes'));
+api.use(require('../routes'));
 
 api.use(errors());
 
