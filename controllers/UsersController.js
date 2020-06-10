@@ -7,6 +7,7 @@ module.exports = {
       .catch((err) => res.status(400).json(err));
   },
   findAll: (req, res) => {
+    // console.log(req.decoded.email);
     UsersService.findAll()
       .then((users) => res.status(200).json(users))
       .catch((err) => res.status(400).json(err));

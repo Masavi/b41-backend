@@ -11,7 +11,7 @@ module.exports = {
       // authorization.split(' '); // -> [ "Bearer", "eyJhbG..." ]
       const token = authorization.split(' ')[1];
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      console.log('⛽️', decoded);
+      // console.log(decoded);
       req.decoded = decoded;
       next();
     } catch (error) {
