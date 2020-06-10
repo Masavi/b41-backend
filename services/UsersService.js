@@ -6,4 +6,5 @@ module.exports = {
     return newUser.save();
   },
   findAll: () => Users.find({ is_active: true }),
+  findOneByEmail: (email) => Users.findOne({ email }),
 };
