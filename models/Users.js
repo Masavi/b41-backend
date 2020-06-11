@@ -29,6 +29,22 @@ const UsersSchema = mongoose.Schema({
     type: Boolean,
     default: true,
   },
+  /*
+  // Ejemplo de manejar embebido cardinalidad de 1-1
+  // Reforzar un historial
+  products: {
+    street_name: {},
+    zip_code: {},
+    city: {},
+    country: {},
+  },
+  // Ejemplo de manejar referenciada la cardinalidad de 1-1
+  // Reforzar la integridad refencial
+  products_ref: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Adresses',
+  },
+  */
 });
 
 // eslint-disable-next-line func-names
