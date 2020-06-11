@@ -14,6 +14,9 @@ const UsersSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
+  // profile_img: {
+  //   type: String -> // url de la imagen que esta almacenada en otro servidor
+  // },
   email: {
     type: String,
     required: true,
@@ -28,6 +31,12 @@ const UsersSchema = mongoose.Schema({
   is_active: {
     type: Boolean,
     default: true,
+  },
+  posts: {
+    images: [{ type: String }],
+    content: { type: String },
+    date: { type: Date, default: Date.now() },
+    tags: [{ type: String }],
   },
   /*
   // Ejemplo de manejar embebido cardinalidad de 1-1
