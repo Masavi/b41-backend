@@ -4,7 +4,12 @@ module.exports = {
   verifyToken: (req, res, next) => {
     /*
         el objeto req.headers contiene adentro el atributo "authorization" y viene así:
-        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZTAzNjIzMTJiN2FlNzM0YTkxMWNmYSIsImVtYWlsIjoiZmVybmFuZG9AZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6IkZlcm5hbmRvIiwiaWF0IjoxNTkxNzU2NDExfQ.QJkiOKOhZmyTq8m6lh8OpfYnGZLceqJtjr3YQoTcfVM'
+        authorization:
+        'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+          .eyJpZCI6IjVlZTAzNjIzMTJiN2FlNzM0YTkxMWNmYSIs
+          ImVtYWlsIjoiZmVybmFuZG9AZ21haWwuY29tIiwiZmlyc
+          3RfbmFtZSI6IkZlcm5hbmRvIiwiaWF0IjoxNTkxNzU2NDExfQ
+          .QJkiOKOhZmyTq8m6lh8OpfYnGZLceqJtjr3YQoTcfVM'
     */
     try {
       const { authorization } = req.headers;
