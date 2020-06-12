@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const { PostsSchema } = require('./Posts');
 
 const SALT_WORK_FACTOR = 10;
 
@@ -32,12 +33,7 @@ const UsersSchema = mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  posts: {
-    images: [{ type: String }],
-    content: { type: String },
-    date: { type: Date, default: Date.now() },
-    tags: [{ type: String }],
-  },
+  posts: [PostsSchema],
   /*
   // Ejemplo de manejar embebido cardinalidad de 1-1
   // Reforzar un historial
